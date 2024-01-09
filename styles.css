@@ -1,3 +1,122 @@
-h1 {
-    color:red;
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto;
+    margin: 0px;
 }
+header, aside, main {
+    padding: 24px;
+}
+h1, h2, h3, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: 1.424rem;
+}
+h2{
+    font-size: 1.266rem;
+    margin: 0.6em 0em 0.6em 0em;
+}
+h3{
+    font-size: 1.125rem;
+    margin: 0.4em 0em 0.4em 0em;
+}
+p{
+    font-size: 1rem;
+    margin: 0.2em 0em 0.2em 0em;
+}
+
+
+header {
+    background-color: paleturquoise;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+header .top, header .bottom {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+}
+header .top {
+    grid-template-columns: 1fr 8fr 1fr 1fr 3fr;
+}
+header .bottom{
+    grid-template-columns: 2fr 8fr 2fr 2fr 2fr;
+}
+header input{
+    justify-self: stretch;
+}
+header .bottom h2{
+    justify-self: start;
+}
+
+
+aside {
+    background-color: antiquewhite;
+    grid-row: 1/-1;
+    display: grid;
+    grid-gap: 20px;
+    justify-content: start;
+    align-content: start;
+}
+aside .cell{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    grid-gap: 16px;
+}
+
+
+
+main {
+    background-color: lightpink;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 24px;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+}
+.projects .card {
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+}
+.card .icons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 8px;
+}
+
+.announcements, .trending {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+}
+.line {
+    height: 1px;
+    background-color: lightgray;
+    width: 100%;
+}
+
+.trending div{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.trending div div{
+    display: flex;
+    flex-direction: column;
+}
+
+
